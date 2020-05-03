@@ -1,0 +1,10 @@
+mixin theme-switcher(options={})
+  - let { mix } = options
+
+  .theme-switcher(class=mix)
+    label.theme-switcher__label Dark Mode
+      input.theme-switcher__control(
+        type="checkbox",
+        class="screen-reader js-theme-switcher__control"
+      )
+      .theme-switcher__toggle

@@ -1,0 +1,55 @@
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
+
+.header {
+  background: var(--top-bg);
+  @include theme-transition;
+
+  &__container {
+    padding: 3.6rem 0;
+
+    @include screen-sm {
+      @include flexbox(center, space-between);
+    }
+  }
+
+  &__content {
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.1rem;
+      background: var(--base-text);
+      opacity: 0.4;
+      margin: 2.4rem 0 1.5rem;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    color: var(--heading-text);
+    margin: 0;
+
+    @include tablet {
+      font-size: 2.8rem;
+    }
+
+    @include screen-sm {
+      margin-left: -0.3rem;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    @include theme-transition;
+  }
+
+  &__text {
+    margin: 0.3rem 0 0;
+  }
+}

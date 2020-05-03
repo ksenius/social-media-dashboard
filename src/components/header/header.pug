@@ -1,0 +1,14 @@
+include ../container/container
+include ../theme-switcher/theme-switcher
+
+mixin header(options={})
+  - let { mix } = options
+
+  header.header(class=mix)
+    +container({mix: 'header__container'})
+
+      .header__content
+        h1.header__heading: a.header__link(href="/")= mainHeading
+        p.header__text Total Followers: #{totalFollowers.toLocaleString()}
+      
+      +theme-switcher
