@@ -1,0 +1,44 @@
+// Breakpoints
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Theme transition
+@mixin theme-transition($duration: 0.6s, $delay: 0.2s) {
+  transition: all $duration ease-out $delay;
+}
+
+// Flexbox
+@mixin flexbox($align, $justify, $flow: null, $content: null) {
+  display: flex;
+
+  @if $flow {
+    flex-flow: $flow;
+  }
+
+  @if $align {
+    align-items: $align;
+  }
+
+  @if $justify {
+    justify-content: $justify;
+  }
+
+  @if $content {
+    align-content: $content;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "social-media-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "parcel src/index.pug -p 3000 --open",
+    "build": "parcel build src/index.pug --no-source-maps",
+    "prebuild": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenius/social-media-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksenius/social-media-dashboard/issues"
+  },
+  "homepage": "https://github.com/ksenius/social-media-dashboard#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svg-sprite": "^1.4.1",
+    "postcss-preset-env": "^6.7.0",
+    "pug": "^2.0.4"
+  },
+  "browserslist": [
+    ">= 1%",
+    "last 2 versions",
+    "not IE 11",
+    "not dead"
+  ]
+}

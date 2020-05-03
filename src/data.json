@@ -1,0 +1,131 @@
+{
+  "site": {
+    "title": "Frontend Mentor | Social Media Dashboard",
+    "font": "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+  },
+  "mainHeading": "Social Media Dashboard",
+  "totalFollowers": 23004,
+  "overviewHeading": "Overview - Today",
+  "cards": [
+    {
+      "network": "Facebook",
+      "username": "nathanf",
+      "followers": {
+        "label": "Followers",
+        "count": 1987,
+        "stats": {
+          "value": 12,
+          "type": "increase"
+        }
+      },
+      "interactions": [
+        {
+          "label": "Page Views",
+          "count": 87,
+          "stats": {
+            "value": 3,
+            "type": "increase"
+          }
+        },
+        {
+          "label": "Likes",
+          "count": 52,
+          "stats": {
+            "value": 2,
+            "type": "decrease"
+          }
+        }
+      ]
+    },
+    {
+      "network": "Twitter",
+      "username": "nathanf",
+      "followers": {
+        "label": "Followers",
+        "count": 1044,
+        "stats": {
+          "value": 99,
+          "type": "increase"
+        }
+      },
+      "interactions": [
+        {
+          "label": "Retweets",
+          "count": 117,
+          "stats": {
+            "value": 303,
+            "type": "increase"
+          }
+        },
+        {
+          "label": "Likes",
+          "count": 507,
+          "stats": {
+            "value": 553,
+            "type": "increase"
+          }
+        }
+      ]
+    },
+    {
+      "network": "Instagram",
+      "username": "realnathanf",
+      "followers": {
+        "label": "Followers",
+        "count": 11734,
+        "stats": {
+          "value": 1099,
+          "type": "increase"
+        }
+      },
+      "interactions": [
+        {
+          "label": "Likes",
+          "count": 5462,
+          "stats": {
+            "value": 2257,
+            "type": "increase"
+          }
+        },
+        {
+          "label": "Profile Views",
+          "count": 52345,
+          "stats": {
+            "value": 1375,
+            "type": "increase"
+          }
+        }
+      ]
+    },
+    {
+      "network": "YouTube",
+      "username": "Nathan F.",
+      "followers": {
+        "label": "Subscribers",
+        "count": 8239,
+        "stats": {
+          "value": 144,
+          "type": "decrease"
+        }
+      },
+      "interactions": [
+        {
+          "label": "Likes",
+          "count": 107,
+          "stats": {
+            "value": 19,
+            "type": "decrease"
+          }
+        },
+        {
+          "label": "Total Views",
+          "count": 1407,
+          "stats": {
+            "value": 12,
+            "type": "decrease"
+          }
+        }
+      ]
+    }
+  ]
+}

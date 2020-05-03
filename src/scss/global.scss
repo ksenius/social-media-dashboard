@@ -1,0 +1,50 @@
+@import './helpers/variables';
+@import './helpers/mixins';
+
+:root {
+  --primary-bg: #{$white};
+  --top-bg: #{$light-top-bg};
+  --toggle-bg: #{$light-toggle-bg};
+  --card-bg: #{$light-card-bg};
+  --card-hover-bg: #{$light-card-hover-bg};
+  --heading-text: #{$very-dark-blue};
+  --base-text: #{$light-text};
+}
+
+[data-theme='dark'] {
+  --primary-bg: #{$very-dark-blue};
+  --top-bg: #{$dark-top-bg};
+  --toggle-bg: #{$toggle-gradient};
+  --card-bg: #{$dark-card-bg};
+  --card-hover-bg: #{$dark-card-hover-bg};
+  --heading-text: #{$white};
+  --base-text: #{$dark-text};
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: {
+    family: 'Inter';
+    size: 1.4rem;
+    weight: 700;
+  }
+  color: var(--base-text);
+  background: var(--primary-bg);
+  @include theme-transition;
+}
+
+.screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+  padding: 0;
+}
