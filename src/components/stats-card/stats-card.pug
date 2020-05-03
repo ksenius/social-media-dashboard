@@ -1,0 +1,43 @@
+include ../social-icon/social-icon
+include ../arrow-icon/arrow-icon
+
+mixin stats-card(options={})
+  -
+    let {
+      network,
+      username,
+      followers,
+      url = '/mock-address/change-me',
+      mix
+    } = options
+
+    let count
+
+    if (followers.count > 10000) {
+      count = Math.floor(followers.count / 1000) + 'k'
+    } else {
+      count = followers.count
+    }
+  
+  a.stats-card(
+    href=url,
+    target="_blank",
+    rel="noreferrer",
+    class=`stats-card_type_${network.toLowerCase()}`,
+    class=mix
+  )
+    .stats-card__info
+      +social-icon({network: network})
+      span.stats-card__username= (network !== 'YouTube') ? `@${username}` : username
+
+    .stats-card__followers-count= count
+    .stats-card__followers-label= followers.label
+
+    .stats-card__info
+      +arrow-icon({
+        direction: (followers.stats.type === 'increase') ? 'up' : 'down',
+        mix: 'stats-card__arrow-icon'
+      })
+      span(class=`stats-card__${followers.stats.type}`)
+        | #{followers.stats.value} Today
+        

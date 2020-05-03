@@ -1,0 +1,12 @@
+mixin arrow-icon(options={})
+  -
+    let {
+      direction = 'up',
+      mix
+    } = options
+
+  svg.arrow-icon(
+    xmlns="http://www.w3.org/2000/svg",
+    class=mix
+  )
+    use(href=`images/icon-${direction}.svg`)

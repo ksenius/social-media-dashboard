@@ -1,0 +1,84 @@
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
+
+.stats-card {
+  display: block;
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--base-text);
+  background: var(--card-bg);
+  padding: 3.2rem 2.4rem 2.4rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  @include theme-transition;
+  user-select: none;
+
+  &:hover {
+    background: var(--card-hover-bg);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+    top: 0;
+    left: 0;
+  }
+
+  &_type {
+    &_facebook::before {
+      background: $facebook;
+    }
+
+    &_twitter::before {
+      background: $twitter;
+    }
+
+    &_instagram::before {
+      background: $instagram;
+    }
+
+    &_youtube::before {
+      background: $youtube;
+    }
+  }
+
+  &__info {
+    @include flexbox(center, center);
+  }
+
+  &__username {
+    margin-left: 0.7rem;
+  }
+
+  &__followers-count {
+    font-size: 5.6rem;
+    letter-spacing: -0.2rem;
+    color: var(--heading-text);
+    margin-top: 1.8rem;
+    @include theme-transition;
+  }
+
+  &__followers-label {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+  }
+
+  &__arrow-icon {
+    margin-right: 0.5rem;
+  }
+
+  &__increase {
+    color: $lime-green;
+  }
+
+  &__decrease {
+    color: $bright-red;
+  }
+}

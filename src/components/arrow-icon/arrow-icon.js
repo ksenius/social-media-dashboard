@@ -1,0 +1,1 @@
+import './arrow-icon.scss';

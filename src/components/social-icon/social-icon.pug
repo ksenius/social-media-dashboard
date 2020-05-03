@@ -1,0 +1,12 @@
+mixin social-icon(options={})
+  -
+    let {
+      network,
+      mix
+    } = options
+
+  svg.social-icon(
+    xmlns="http://www.w3.org/2000/svg",
+    class=mix
+  )
+    use(href=`images/icon-${network.toLowerCase()}.svg`)
