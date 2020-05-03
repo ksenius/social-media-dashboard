@@ -8,7 +8,7 @@
   &__container {
     padding: 3.6rem 0;
 
-    @include screen-sm {
+    @include tablet {
       @include flexbox(center, space-between);
     }
   }
@@ -38,7 +38,7 @@
       font-size: 2.8rem;
     }
 
-    @include screen-sm {
+    @include screen-md {
       margin-left: -0.3rem;
     }
   }

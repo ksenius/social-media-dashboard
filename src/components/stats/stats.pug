@@ -1,0 +1,15 @@
+include ../container/container
+include ../stats-card/stats-card
+
+mixin stats(options={})
+  - let { mix } = options
+
+  section.stats
+    h2.screen-reader Followers Count
+    +container({mix: 'stats__container'})
+      each card in cards
+        +stats-card({
+          network: card.network,
+          username: card.username,
+          followers: card.followers
+        })

@@ -1,0 +1,47 @@
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
+
+.stats {
+  position: relative;
+
+  @include screen-md {
+    padding: 1rem 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4.4rem;
+    background: var(--top-bg);
+    border-radius: 0 0 2rem 2rem;
+    @include theme-transition;
+    z-index: -1;
+
+    @include tablet {
+      height: 11.8rem;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2.4rem;
+    }
+
+    @include screen-sm {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include screen-md {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 3rem;
+    }
+  }
+}
