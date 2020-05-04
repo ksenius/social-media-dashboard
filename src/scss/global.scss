@@ -23,6 +23,7 @@
 
 html {
   font-size: 10px;
+  height: 100%;
 }
 
 body {
@@ -35,6 +36,10 @@ body {
   }
   color: var(--base-text);
   background: var(--primary-bg);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   @include theme-transition;
 }
 
