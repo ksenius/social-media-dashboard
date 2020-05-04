@@ -5,8 +5,11 @@ mixin social-icon(options={})
       mix
     } = options
 
-  svg.social-icon(
-    xmlns="http://www.w3.org/2000/svg",
-    class=mix
-  )
-    use(href=`images/icon-${network.toLowerCase()}.svg`)
+  span.social-icon(class=mix)
+    span.screen-reader= network
+
+    svg.social-icon__svg(
+      xmlns="http://www.w3.org/2000/svg",
+      aria-hidden="true"
+    )
+      use(href=`images/icon-${network.toLowerCase()}.svg`)

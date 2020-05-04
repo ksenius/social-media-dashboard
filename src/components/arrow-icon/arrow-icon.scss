@@ -1,4 +1,6 @@
 .arrow-icon {
-  width: 0.8rem;
-  height: 0.8rem;
+  &__svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }

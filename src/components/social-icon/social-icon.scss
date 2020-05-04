@@ -1,4 +1,6 @@
 .social-icon {
-  width: 2rem;
-  height: 2rem;
+  &__svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
