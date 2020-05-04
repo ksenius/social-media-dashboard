@@ -2,4 +2,9 @@
   width: calc(100% - 4.8rem);
   max-width: 111rem;
   margin: 0 auto;
+
+  @media (min-width: 1440px) {
+    width: calc(100% - 33rem);
+    max-width: 150rem;
+  }
 }
