@@ -1,0 +1,23 @@
+include ../container/container
+include ../overview-card/overview-card
+
+mixin overview(options={})
+  -
+    let { mix } = options
+
+    // Swap instagram and twitter cards
+    cards[1] = [cards[2], cards[2] = cards[1]][0]
+
+  section.overview(class=mix)
+    +container
+      h2.overview__heading= overviewHeading
+
+      .overview__content
+        each card, index in cards
+          each interaction in card.interactions
+            +overview-card({
+              network: card.network,
+              label: interaction.label,
+              count: interaction.count,
+              stats: interaction.stats
+            })

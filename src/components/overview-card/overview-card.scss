@@ -1,0 +1,62 @@
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
+
+.overview-card {
+  display: grid;
+  grid-template-areas: 
+    'label network-icon'
+    'count stats';
+  row-gap: 2.5rem;
+  text-decoration: none;
+  color: var(--base-text);
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  padding: 2.4rem 3.1rem 2.2rem 2.4rem;
+  @include theme-transition;
+  user-select: none;
+
+  &:hover {
+    background: var(--card-hover-bg);
+  }
+
+  &__label {
+    grid-area: label;
+    align-self: center;
+  }
+
+  &__network-icon {
+    grid-area: network-icon;
+    justify-self: end;
+    margin-top: 0.2rem;
+  }
+
+  &__count {
+    grid-area: count;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--heading-text);
+    @include theme-transition;
+  }
+
+  &__stats {
+    grid-area: stats;
+    place-self: end end;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+
+    &_type {
+      &_increase {
+        color: $lime-green;
+      }
+  
+      &_decrease {
+        color: $bright-red;
+      }
+    }
+  }
+
+  &__arrow-icon {
+    margin-right: 0.3rem;
+  }
+}

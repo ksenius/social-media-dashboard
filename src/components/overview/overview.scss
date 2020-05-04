@@ -1,0 +1,30 @@
+@import '../../scss/helpers/variables';
+@import '../../scss/helpers/mixins';
+
+.overview {
+  padding: 3.6rem 0;
+
+  &__heading {
+    font-size: 2.4rem;
+    margin: 0;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 2.4rem;
+    margin-top: 2.4rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap:2.4rem;
+    }
+
+    @include screen-sm {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include screen-md {
+      column-gap: 3rem;
+    }
+  }
+}

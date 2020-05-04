@@ -1,0 +1,45 @@
+include ../social-icon/social-icon
+include ../arrow-icon/arrow-icon
+
+mixin overview-card(options={})
+  -
+    let {
+      network,
+      label,
+      count,
+      stats,
+      url = '/mock-address/change-me',
+      mix
+    } = options
+
+    let newCount
+
+    if (count > 10000) {
+      newCount = Math.floor(count / 1000) + 'k'
+    } else {
+      newCount = count
+    }
+
+  a.overview-card(
+    href=url,
+    target="_blank",
+    rel="noreferrer",
+    class=mix
+  )
+    .overview-card__label= label
+    +social-icon({
+      network: network,
+      mix: 'overview-card__network-icon'
+    })
+    .overview-card__count= newCount
+    .overview-card__stats(
+      class=`overview-card__stats_type_${stats.type}`
+    )
+      +arrow-icon({
+        direction: (stats.type === 'increase') ? 'up' : 'down',
+        mix: 'overview-card__arrow-icon'
+      })
+      | #{stats.value}%
+
+
+
