@@ -4,7 +4,7 @@ class ThemeSwitcher {
   constructor() {
     this.checkbox = document.querySelector('.js-theme-switcher__control');
 
-    this._getSavedTheme();
+    this._getTheme();
   }
 
   init() {
@@ -30,7 +30,7 @@ class ThemeSwitcher {
     localStorage.setItem('theme', theme);
   }
 
-  _getSavedTheme() {
+  _getTheme() {
     try {
       const savedTheme = localStorage.getItem('theme');
 
@@ -40,10 +40,21 @@ class ThemeSwitcher {
         if (savedTheme === 'dark') {
           this.checkbox.checked = true;
         }
+      } else {
+        this._getPreferredColorScheme();
       }
     } catch (error) {
       console.error(error);
       localStorage.removeItem('theme');
+    }
+  }
+
+  _getPreferredColorScheme() {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (isDark) {
+      this.checkbox.checked = true;
+      this._setTheme('dark');
     }
   }
 }
