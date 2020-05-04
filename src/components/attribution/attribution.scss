@@ -1,0 +1,14 @@
+.attribution {
+  font-size: 1.2rem;
+
+  &__link {
+    color: var(--base-text);
+    text-decoration: none;
+    border-bottom: 1px solid hsl(210, 78%, 56%);
+    transition: 0.5s;
+
+    &:hover {
+      border-color: hsl(146, 68%, 55%);
+    }
+  }
+}
