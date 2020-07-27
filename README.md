@@ -1,6 +1,7 @@
-# Social media dashboard
+# Social media dashboard with theme switcher
 
-Frontend Mentor challenge solution: Social media dashboard with theme switcher.<br>
+This project is a solution to a junior level [Frontend Mentor](https://www.frontendmentor.io) challenge.
+
 Built using Pug, SCSS, CSS variables, vanilla JS, Parcel.
 
 **Project features**:
@@ -9,9 +10,13 @@ Built using Pug, SCSS, CSS variables, vanilla JS, Parcel.
 - The manually set theme always overrides the automatically detected theme;
 - The default theme is light.
 
-[Live Preview](https://social-media-dashboard-gamma.now.sh/) · [FEM Solution Page](https://www.frontendmentor.io/solutions/social-media-dashboard-pug-scss-vanilla-js-css-variables-parcel-yRxrSQ3EW)
+[Live Page](https://social-media-dashboard-gamma.now.sh/)
 
-## Available npm scripts
+## Project Setup
+
+Clone the repository and run npm install from the project's root directory to install the dependencies.
+
+### Available Scripts
 
 `npm start` - runs the project in the development mode on *localhost:3000*.
 
